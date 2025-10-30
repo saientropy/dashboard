@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Heart Health Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Heart Health Dashboard</h1>
+      <p class="subtitle">WHOOP + Orangetheory</p>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Load Data</h2>
+        <div class="upload-row">
+          <div class="uploader">
+            <label>WHOOP JSON</label>
+            <input id="whoopFile" type="file" accept="application/json" />
+          </div>
+          <div class="uploader">
+            <label>Orangetheory CSV</label>
+            <input id="otfFile" type="file" accept=".csv,text/csv" />
+          </div>
+          <div class="uploader">
+            <label>RR intervals CSV</label>
+            <input id="rrFile" type="file" accept=".csv,text/csv" />
+          </div>
+        </div>
+        <div class="actions">
+          <button id="loadSamples">Load Sample Data</button>
+          <button id="clearData" class="secondary">Clear</button>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h2>2-min Heart Rate Recovery</h2>
+          <canvas id="hrrChart"></canvas>
+          <div id="hrrList" class="list"></div>
+        </div>
+        <div class="card">
+          <h2>HRV (RMSSD)</h2>
+          <canvas id="hrvChart"></canvas>
+          <div id="hrvList" class="list"></div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Workout Heart Rate Timeline</h2>
+          <select id="workoutSelect"></select>
+          <canvas id="hrTimeline"></canvas>
+        </div>
+        <div class="card">
+          <h2>Summary</h2>
+          <div id="summary" class="summary"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span>Local-only dashboard. Data never leaves your machine.</span>
+    </footer>
+
+    <script src="./libs/metrics.js"></script>
+    <script src="./libs/parser.js"></script>
+    <script src="./app.js"></script>
+  </body>
+  </html>
+
+

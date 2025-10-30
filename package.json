@@ -1,0 +1,32 @@
+{
+  "name": "heart-health-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "^2.11.1",
+    "@prisma/client": "5.19.1",
+    "dayjs": "1.11.13",
+    "next": "14.2.3",
+    "next-auth": "^5.0.0-beta.30",
+    "nodemailer": "7.0.10",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "24.9.2",
+    "@types/react": "19.2.2",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "prisma": "5.19.1",
+    "tailwindcss": "^4.1.16",
+    "typescript": "5.6.3"
+  }
+}
