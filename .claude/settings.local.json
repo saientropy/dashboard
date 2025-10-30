@@ -14,7 +14,10 @@
       "Bash(git remote add:*)",
       "Bash(git branch:*)",
       "Bash(git push:*)",
-      "Bash(gh repo create:*)"
+      "Bash(gh repo create:*)",
+      "Bash(open http://localhost:3000)",
+      "Bash(pkill:*)",
+      "Bash(npm uninstall:*)"
     ],
     "deny": [],
     "ask": []
