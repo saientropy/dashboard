@@ -2,11 +2,11 @@
   "crons": [
     {
       "path": "/api/cron/fetch",
-      "schedule": "0 */6 * * *" // every 6 hours
+      "schedule": "0 */6 * * *"
     },
     {
       "path": "/api/cron/otf",
-      "schedule": "15 */6 * * *" // stagger 6-hourly
+      "schedule": "15 */6 * * *"
     }
   ]
 }
